@@ -33,7 +33,7 @@ if(loginForm) {
         errorMessage.textContent = '';
         e.preventDefault();
         
-        fetch(URL+'/signin?username='+username.value+'&password='+password.value).then((response) => {
+        fetch('/signin?username='+username.value+'&password='+password.value).then((response) => {
             response.json().then((data) => {
                 
                 if(data.error) {
@@ -58,7 +58,7 @@ if(registrationForm) {
         regSuccessMessage.textContent = '';
         regErrorMessage.textContent = '';
         e.preventDefault();
-        fetch(URL+'/registration?username='+regUsername.value+'&password='+regPassword.value).then((response) => {
+        fetch('/registration?username='+regUsername.value+'&password='+regPassword.value).then((response) => {
             response.json().then((data) => {
                 if(data.error) {
                     regErrorMessage.textContent = data.error
@@ -83,7 +83,7 @@ if(contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         contactSuccessMessage.textContent = '';
-        fetch(URL+'/send_mail?first_name='+contactFirstName.value+'&last_name='+contactLastName.value+'&email='+contactEmail.value+'&message='+contactMessage.value).then((response) => {
+        fetch('/send_mail?first_name='+contactFirstName.value+'&last_name='+contactLastName.value+'&email='+contactEmail.value+'&message='+contactMessage.value).then((response) => {
             response.json().then((data) => {
                 if(data.error) {
                     contactErrorMessage.textContent = data.error
