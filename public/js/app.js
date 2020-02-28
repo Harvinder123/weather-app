@@ -3,7 +3,7 @@ const weatherForm = document.querySelector('#search_form');
 const search = document.querySelector('#location');
 const messageOne = document.querySelector('#message_1');
 const messageTwo = document.querySelector('#message_2');
-if(weatherForm) {
+if(weatherForm) { 
     weatherForm.addEventListener('submit', (e) => {
         messageOne.textContent = 'Loading...';
         messageTwo.textContent = '';
