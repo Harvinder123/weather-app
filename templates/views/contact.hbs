@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="main-content"> 
+        {{>header}}
+        <p>{{content}}</p>
+        <p id="success_message" style="color: green;"></p>
+        <p id="error_message" style="color: red;"></p>
+        <form id="contact_form">
+            <div class="container">
+            <label for="first_name"><b>First Name</b></label>
+                <input type="text" placeholder="Enter First Name" id="first_name">
+            <label for="last_name"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last Name" id="last_name">
+            <label for="last_name"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" id="email">
+            <label for="last_name"><b>Message</b></label><br>
+                <textarea rows="6" cols="84" id="message"></textarea>
+            <button type="submit" id="contact_button">Submit</button>
+            </div>
+        </form> 
+    </div>
+    {{>footer}}
+     <script src="/js/app.js"></script>
+</body>
+</html>
